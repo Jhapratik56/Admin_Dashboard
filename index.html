@@ -1,0 +1,995 @@
+      <!DOCTYPE html>
+      <html>
+
+      <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width">
+        <title>Admin Dashboard</title>
+        <link href="style.css" rel="stylesheet" type="text/css" />
+        <!-- material Icon cdn -->
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+          rel="stylesheet">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+      </head>
+
+      <body>
+        <div class='container'>
+          <aside>
+            <div class="top">
+               <div class="logo">
+                 <img src="logo.png" alt="logo">
+                 <h2>Admin<span class="danger">Panel</span></h2>
+               </div>
+               <div class="close" id="close-btn">
+                 <span class="material-symbols-outlined">
+                   close
+                 </span>
+               </div>
+            </div>
+            <div class="sidebar">
+              <a href="#" data-target="dashboard" >
+                <span class="material-symbols-outlined">
+                  grid_view
+                </span>
+                <h3>Dashboard</h3>
+              </a>
+              <a href="#" class="active" data-target="customers">
+                <span class="material-symbols-outlined">
+                  person
+                </span>
+                <h3>Customers</h3>
+              </a>
+              <a href="#" data-target="orders">
+                <span class="material-symbols-outlined">
+                  receipt_long
+                </span>
+                <h3>Orders</h3>
+              </a>
+              <a href="#" data-target="analytics">
+                <span class="material-symbols-outlined">
+                  search_insights
+                </span>
+                <h3>Analytics</h3>
+              </a>
+              <a href="#" data-target="messages">
+                <span class="material-symbols-outlined">
+                  chat
+                </span>
+                <h3>Messages</h3>
+                <span class="message-count">26</span>
+              </a>
+              <a href="#" data-target="product">
+                <span class="material-symbols-outlined">
+                  inventory_2
+                </span>
+                <h3>Product</h3>
+                <a href="#" data-target="report">
+                  <span class="material-symbols-outlined">
+                    report
+                  </span>
+                  <h3>Reports</h3>
+                </a>
+                <a href="#" data-target="setting">
+                  <span class="material-symbols-outlined">
+                    settings
+                  </span>
+                  <h3>Setting</h3>
+                  <a href="#" data-target="add">
+                    <span class="material-symbols-outlined">
+                      add
+                    </span>
+                    <h3>Add Product</h3>
+                  </a>
+                  <a href="#" data-target="logout" onclick="logout()">
+                    <span class="material-symbols-outlined">
+                      exit_to_app
+                    </span>
+                    <h3>Log Out</h3>
+                  </a>
+                </a>
+              </a>
+            
+          </aside>
+            <main id="main1">
+            <h1>Dashboard</h1>
+                <div class="date">
+                  <input type="data">
+                </div>
+                <div class="insights">
+                  <div class="sales">
+                    <span class="material-symbols-outlined">
+                      analytics
+                    </span>
+                    <div class="middle">
+                      <div class="left">
+                        <h3>Total sales</h3>
+                        <h1>$27,000</h1>
+                      </div>
+              <div class="progress">
+                        <svg>
+                          <circle cx='38' cy='38' r='36'></circle>
+                        </svg>
+              <div class="number">
+                          <p>81%</p>
+                        </div>
+                    </div>
+                  </div>
+                     <small class="text-muted">Last 24 Hours</small>
+                  </div> 
+                      <div class="expenses">
+                        <div class="sales">
+                          <span class="material-symbols-outlined">
+                            bar_chart
+                          </span>
+                          <div class="middle">
+                            <div class="left">
+                              <h3>Total Expenses</h3>
+                              <h1>$14,000</h1>
+                            </div>
+                    <div class="progress">
+                              <svg>
+                                <circle cx='38' cy='38' r='36'></circle>
+                              </svg>
+                    <div class="number">
+                                <p>56%</p>
+                              </div>
+                          </div>
+                          </div>
+                        </div>
+                        <small class="text-muted">Last 24 Hours</small>
+                      </div>
+                            <div class="income">
+                              <div class="sales">
+                                <span class="material-symbols-outlined">
+                                  stacked_line_chart
+                                </span>
+                                <div class="middle">
+                                  <div class="left">
+                                    <h3>Total Income</h3>
+                                    <h1>$38,000</h1>
+                                  </div>
+                          <div class="progress">
+                                    <svg>
+                                      <circle cx='38' cy='38' r='36'></circle>
+                                    </svg>
+                          <div class="number">
+                                      <p>69%</p>
+                                    </div>
+                                </div>
+                              </div>
+                              </div>
+                    <small class="text-muted">Last 24 Hours</small>
+                </div>
+                </div>
+              <div class="recent-orders">
+                <h2>Recent Orders</h2>
+                <table>
+                  <thead>
+                    <tr>
+                <th>Product Name</th>
+                <th>Product Number</th>
+                      <th>Payment</th>
+                      <th>Status</th>
+                   <th></th>
+                    
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>Foldable Mini Drone</td>
+                      <td>85631</td>
+                      <td>Due</td>
+                      <td class="warning">Pending</td>
+                      <td class="primary">Details</td>
+                  </tr>
+                    <tr>
+                        <td>Foldable Mini Drone</td>
+                        <td>85631</td>
+                        <td>Due</td>
+                        <td class="warning">Pending</td>
+                        <td class="primary">Details</td>
+                    </tr>
+                    <tr>
+                        <td>Foldable Mini Drone</td>
+                        <td>85631</td>
+                        <td>Due</td>
+                        <td class="warning">Pending</td>
+                        <td class="primary">Details</td>
+                    </tr>
+                    <tr>
+                        <td>Foldable Mini Drone</td>
+                        <td>85631</td>
+                        <td>Due</td>
+                        <td class="warning">Pending</td>
+                        <td class="primary">Details</td>
+                    </tr>
+                    <tr>
+                        <td>Foldable Mini Drone</td>
+                        <td>85631</td>
+                        <td>Due</td>
+                        <td class="warning">Pending</td>
+                        <td class="primary">Details</td>
+                    </tr>
+                    <tr>
+                        <td>Foldable Mini Drone</td>
+                        <td>85631</td>
+                        <td>Due</td>
+                        <td class="warning">Pending</td>
+                        <td class="primary">Details</td>
+                    </tr>
+                    <tr>
+                        <td>Foldable Mini Drone</td>
+                        <td>85631</td>
+                        <td>Due</td>
+                        <td class="warning">Pending</td>
+                        <td class="primary">Details</td>
+                    </tr>
+                    <tr>
+                        <td>Foldable Mini Drone</td>
+                        <td>85631</td>
+                        <td>Due</td>
+                        <td class="warning">Pending</td>
+                        <td class="primary">Details</td>
+                    </tr>
+                  </tbody>
+                </table>
+                <a href= "#">Show All</a>
+              </div>
+        
+              </main>
+        
+          </main>
+          <main id="main3">
+            <h1>Orders</h1>
+              <h2><center>Orders</h2></center>
+              <table>
+                <thead>
+                  <tr>
+              <th>Product Name</th>
+              <th>Product Number</th>
+                    <th>Payment</th>
+                    <th>Status</th>
+                 <th></th>
+
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>Foldable Mini Drone</td>
+                    <td>85631</td>
+                    <td>Due</td>
+                    <td class="warning">Pending</td>
+                    <td class="primary">Details</td>
+                </tr>
+                  <tr>
+                      <td>Baltra Pressure Cooker 3L Megna</td>
+                      <td>45111</td>
+                      <td>Due</td>
+                      <td class="warning">Pending</td>
+                      <td class="primary">Details</td>
+                  </tr>
+                  <tr>
+                      <td>Baltra Induction Infrared Cooktop Sensible Plus 4000W</td>
+                      <td>8546</td>
+                      <td>Due</td>
+                      <td class="warning">Pending</td>
+                      <td class="primary">Details</td>
+                  </tr>
+                  <tr>
+                      <td>Earldom 1 m ET aux 15 genuine aux cable</td>
+                      <td>7631</td>
+                      <td>Due</td>
+                      <td class="warning">Pending</td>
+                      <td class="primary">Details</td>
+                  </tr>
+                  <tr>
+                      <td>Calvas MINI Keyboard MT08 2.4GHz Wireless 7 Color Backlit English Russian Spanish Remote Control Touchpad For Android TV Box Computer</td>
+                      <td>5631</td>
+                      <td>paid</td>
+                      <td class="warning">Pending</td>
+                      <td class="primary">Details</td>
+                  </tr>
+                  <tr>
+                      <td>emei GM - 6008 Professional Hair Clipper Trimmer</td>
+                      <td>8563</td>
+                      <td>due</td>
+                      <td class="warning">Pending</td>
+                      <td class="primary">Details</td>
+                  </tr>
+                  <tr>
+                      <td>Scarlet Electric kettle Sc-1820</td>
+                      <td>98631</td>
+                      <td>paid</td>
+                      <td class="warning">Pending</td>
+                      <td class="primary">Details</td>
+                  </tr>
+                  <tr>
+                      <td>16 LED Selfie Flash Light</td>
+                      <td>85631</td>
+                      <td>Due</td>
+                      <td class="warning">Pending</td>
+                      <td class="primary">Details</td>
+                  </tr>
+                  <tr>
+                    <td>Baltra Pressure Cooker 3L Megna</td>
+                    <td>45111</td>
+                    <td>Due</td>
+                    <td class="warning">Pending</td>
+                    <td class="primary">Details</td>
+                  </tr>
+                  <tr>
+                    <td>Baltra Induction Infrared Cooktop Sensible Plus 4000W</td>
+                    <td>8546</td>
+                    <td>Due</td>
+                    <td class="warning">Pending</td>
+                    <td class="primary">Details</td>
+                  </tr>
+                  <tr>
+                    <td>Earldom 1 m ET aux 15 genuine aux cable</td>
+                    <td>7631</td>
+                    <td>Due</td>
+                    <td class="warning">Pending</td>
+                    <td class="primary">Details</td>
+                  </tr>
+                  <tr>
+                    <td>Calvas MINI Keyboard MT08 2.4GHz Wireless 7 Color Backlit English Russian Spanish Remote Control Touchpad For Android TV Box Computer</td>
+                    <td>5631</td>
+                    <td>paid</td>
+                    <td class="warning">Pending</td>
+                    <td class="primary">Details</td>
+                  </tr>
+                  <tr>
+                    <td>emei GM - 6008 Professional Hair Clipper Trimmer</td>
+                    <td>8563</td>
+                    <td>due</td>
+                    <td class="warning">Pending</td>
+                    <td class="primary">Details</td>
+                  </tr>
+                  <tr>
+                    <td>Scarlet Electric kettle Sc-1820</td>
+                    <td>98631</td>
+                    <td>paid</td>
+                    <td class="warning">Pending</td>
+                    <td class="primary">Details</td>
+                  </tr>
+                  <tr>
+                    <td>16 LED Selfie Flash Light</td>
+                    <td>85631</td>
+                    <td>Due</td>
+                    <td class="warning">Pending</td>
+                    <td class="primary">Details</td>
+                  </tr>
+                </tbody>
+              </table>
+            
+          </main>
+        <main id="main4">
+          <h1>Analytics</h1>
+          <h2><center>Analytics</h2></center>
+          <div class="insights">
+            <div class="sales">
+              <span class="material-symbols-outlined">
+                analytics
+              </span>
+              <div class="middle">
+                <div class="left">
+                  <h3>Total sales</h3>
+                  <h1>$27,000</h1>
+                </div>
+          <div class="progress">
+                  <svg>
+                    <circle cx='38' cy='38' r='36'></circle>
+                  </svg>
+          <div class="number">
+                    <p>81%</p>
+                  </div>
+              </div>
+            </div>
+               <small class="text-muted">Last 24 Hours</small>
+            </div> 
+            <div class="expenses">
+              <div class="sales">
+                <span class="material-symbols-outlined">
+                how_to_reg
+                </span>
+                <div class="middle">
+                  <div class="left">
+                    <h3>Total Number of Registered User</h3>
+                    <h1>8,000</h1>
+                  </div>
+            <div class="progress">
+                    <svg>
+                      <circle cx='38' cy='38' r='36'></circle>
+                    </svg>
+            <div class="number">
+                      <p>46%</p>
+                    </div>
+                </div>
+                </div>
+              </div>
+              <small class="text-muted">Last 24 Hours</small>
+            </div>
+            <div class="sales">
+              <span class="material-symbols-outlined">
+              group
+              </span>
+              <div class="middle">
+                <div class="left">
+                  <h3>Active User</h3>
+                  <h1>18000</h1>
+                </div>
+            <div class="progress">
+                  <svg>
+                    <circle cx='38' cy='38' r='36'></circle>
+                  </svg>
+            <div class="number">
+                    <p>86%</p>
+                  </div>
+              </div>
+            </div>
+               <small class="text-muted">Last 24 Hours</small>
+            </div> 
+            <div class="expenses">
+              <div class="sales">
+                <span class="material-symbols-outlined">
+                trending_up
+                </span>
+                <div class="middle">
+                  <div class="left">
+                    <h3>User Retention Rate</h3>
+                    <h1>56%</h1>
+                  </div>
+            <div class="progress">
+                    <svg>
+                      <circle cx='38' cy='38' r='36'></circle>
+                    </svg>
+            <div class="number">
+                      <p>56%</p>
+                    </div>
+                </div>
+                </div>
+              </div>
+              <small class="text-muted">Last 24 Hours</small>
+            </div>
+            <div class="sales">
+              <span class="material-symbols-outlined">
+                analytics
+              </span>
+              <div class="middle">
+                <div class="left">
+                  <h3>Total Number Of Visits</h3>
+                  <h1>81,0000</h1>
+                </div>
+            <div class="progress">
+                  <svg>
+                    <circle cx='38' cy='38' r='36'></circle>
+                  </svg>
+            <div class="number">
+                    <p>81%</p>
+                  </div>
+              </div>
+            </div>
+               <small class="text-muted">Last 24 Hours</small>
+            </div> 
+            <div class="expenses">
+              <div class="sales">
+                <span class="material-symbols-outlined">
+                  bar_chart
+                </span>
+                <div class="middle">
+                  <div class="left">
+                    <h3>Total Expenses</h3>
+                    <h1>$14,000</h1>
+                  </div>
+            <div class="progress">
+                    <svg>
+                      <circle cx='38' cy='38' r='36'></circle>
+                    </svg>
+            <div class="number">
+                      <p>56%</p>
+                    </div>
+                </div>
+                </div>
+              </div>
+              <small class="text-muted">Last 24 Hours</small>
+            </div>
+            <div class="sales">
+              <span class="material-symbols-outlined">
+              percent
+              </span>
+              <div class="middle">
+                <div class="left">
+                  <h3>Bounce Rate</h3>
+                  <h1>36%</h1>
+                </div>
+            <div class="progress">
+                  <svg>
+                    <circle cx='38' cy='38' r='36'></circle>
+                  </svg>
+            <div class="number">
+                    <p>36%</p>
+                  </div>
+              </div>
+            </div>
+               <small class="text-muted">Last 24 Hours</small>
+            </div> 
+            <div class="expenses">
+              <div class="sales">
+                <span class="material-symbols-outlined">
+                  bar_chart
+                </span>
+                <div class="middle">
+                  <div class="left">
+                    <h3>Number of Item Published</h3>
+                    <h1>14,000</h1>
+                  </div>
+            <div class="progress">
+                    <svg>
+                      <circle cx='38' cy='38' r='36'></circle>
+                    </svg>
+            <div class="number">
+                      <p>56%</p>
+                    </div>
+                </div>
+                </div>
+              </div>
+              <small class="text-muted">Last 24 Hours</small>
+            </div>
+            <div class="sales">
+              <span class="material-symbols-outlined">
+                analytics
+              </span>
+              <div class="middle">
+                <div class="left">
+                  <h3>Server response time</h3>
+                  <h1>300ms</h1>
+                </div>
+            <div class="progress">
+                  <svg>
+                    <circle cx='38' cy='38' r='36'></circle>
+                  </svg>
+            <div class="number">
+                    <p>91%</p>
+                  </div>
+              </div>
+            </div>
+               <small class="text-muted">Last 24 Hours</small>
+            </div> 
+            <div class="expenses">
+              <div class="sales">
+                <span class="material-symbols-outlined">
+                  bar_chart
+                </span>
+                <div class="middle">
+                  <div class="left">
+                    <h3>Page load times</h3>
+                    <h1>3 sec</h1>
+                  </div>
+            <div class="progress">
+                    <svg>
+                      <circle cx='38' cy='38' r='36'></circle>
+                    </svg>
+            <div class="number">
+                      <p>69%</p>
+                    </div>
+                </div>
+                </div>
+              </div>
+              <small class="text-muted">Last 24 Hours</small>
+            </div>
+                  <div class="income">
+                    <div class="sales">
+                      <span class="material-symbols-outlined">
+                        stacked_line_chart
+                      </span>
+                      <div class="middle">
+                        <div class="left">
+                          <h3>Upto Time rates</h3>
+                          <h1></h1>
+                        </div>
+                <div class="progress">
+                          <svg>
+                            <circle cx='38' cy='38' r='36'></circle>
+                          </svg>
+                <div class="number">
+                            <p>81%</p>
+                          </div>
+                      </div>
+                    </div>
+                    </div>
+            <small class="text-muted">Last 24 Hours</small>
+            </div>
+            </div>
+        
+        </main>
+        <main id="main5">
+          <h1>Message</h1>
+          <h2><center>Message</h2></center>
+          <table>
+            <thead>
+              <tr>
+          <th><h2>Customer Name</h2></th>
+          <th><h2>Customer Message</h2></th>
+                
+             <th>Status</th>
+
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>John</td>
+                <td>Hello, I purchased your product recently and I'm encountering some issues with its functionality. Can you please assist me in resolving this?"</td>
+                <td><button>Reply</button></td>
+                <td class="warning"><button>Mark as Read</button></td>
+                <td class="primary">Details</td>
+            </tr>
+              <tr>
+                  <td>Sarah</td>
+                  <td>Hi there, I just wanted to say how impressed I am with your customer service! I had a problem with my order, but your team resolved it swiftly. Thank you!"</td>
+                  <td><button>Reply</button></td>
+                  <td class="warning"><button>Mark as Read</button></td>
+                  <td class="primary">Details</td>
+              </tr>
+              <tr>
+                  <td>Michael</td>
+                  <td>Good afternoon, I have a question about the warranty for the item I bought from your store. Could you provide me with some information on that?"</td>
+                <td><button>Reply</button></td>
+                <td class="warning"><button>Mark as Read</button></td>
+                <td class="primary">Details</td>
+              </tr>
+              <tr>
+                  <td>Emily</td>
+                  <td>Hey, I love your new feature updates! The latest version of your app is so much smoother and user-friendly. Keep up the great work!"</td>
+                <td><button>Reply</button></td>
+                <td class="warning"><button>Mark as Read</button></td>
+                <td class="primary">Details</td>
+              </tr>
+              <tr>
+                  <td>David</td>
+                  <td>Hi, I noticed a discrepancy in my billing statement. It seems like I've been overcharged for my last purchase. Can you please look into this matter?"</td>
+                <td><button>Reply</button></td>
+                <td class="warning"><button>Mark as Read</button></td>
+                <td class="primary">Details</td>
+              </tr>
+              <tr>
+                  <td>Jessica</td>
+                  <td>Hello, I'm interested in your services but would like some more details before making a decision. Is there someone I can speak to about this?"</td>
+                <td><button>Reply</button></td>
+                <td class="warning"><button>Mark as Read</button></td>
+                <td class="primary">Details</td>
+              </tr>
+              <tr>
+                  <td>Alex</td>
+                  <td>Good morning, I just received my order, and unfortunately, one of the items is damaged. Can you guide me through the process of returning it for a replacement?"</td>
+                <td><button>Reply</button></td>
+                <td class="warning"><button>Mark as Read</button></td>
+                <td class="primary">Details</td>
+              </tr>
+            </tbody>
+          </table>
+        
+        </main>
+        <main id="main6">
+          <h1 style="text-align:left">Products Management </h1>
+          <table>
+            <thead>
+              <tr>
+                <th>Online</th>
+                <th>In Process </th>
+                <th>Offline</th>
+              </tr>
+            </thead>
+            <tbody>
+              <td>45</td>
+              <td>96</td>
+              <td>78</td>
+            </tbody>
+          </table>
+          <table>
+            <thead>
+              <tr>
+                <th width="30%">Image</th>
+          <th width="auto">Product Name</th>
+          <th>Product Number</th>
+                <th>Price</th>
+                <th>Stocks<th>
+                <th>Remark</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><img src="https://www.thelaughinggull.co.uk/wp-content/uploads/2020/09/KGTI4350.jpeg" width="30%"></td>
+                <td>Cozy Comfort Weighted Blanket</td>
+                <td>85631</td>
+                <td>$59.99</td>
+                <td class="warning">Available<td>
+                <td class="primary">Details</td>
+            </tr>
+              <tr>
+                <td><img src="https://nutribulletindia.com/cdn/shop/products/productfeatures3.png"</td>
+                  <td>NutriBlend Pro Smoothie Maker</td>
+                  <td>5631</td>
+                  <td>$39.95</td>
+                  <td class="warning">Few Left</td>
+                  <td class="primary">Details</td>
+              </tr>
+              <tr>
+                <td><img src="https://static-01.daraz.com.np/p/4bdda500448212a6fc1dddf666d300d1.jpg"</td>
+                  <td>ActiveFit+ Wireless Fitness Tracker</td>
+                  <td>5461</td>
+                  <td>$79.99</td>
+                  <td class="warning">Out of Stocks</td>
+                  <td class="primary">Details</td>
+              </tr>
+              <tr>
+                  <td><img src="https://m.media-amazon.com/images/I/81Gq0C0dVhL.jpg"</td>
+                  <td>Evergreen Indoor Herb Garden Kit</td>
+                <td>6949</td>
+                  <td> $24.99</td>
+                  <td class="warning">Few Left</td>
+                  <td class="primary">Details</td>
+              </tr>
+              <tr>
+                <td><img src="https://m.media-amazon.com/images/I/71BKtsRYYIL.jpg"</td>
+                  <td>NightLite+ Smart Sleep Lamp</td>
+                  <td>7794</td>
+                  <td>$44.99</td>
+                  <td class="warning">Available</td>
+                  <td class="primary">Details</td>
+              </tr>
+            </tbody>
+          </table>
+        </main>
+        <main id="main2">
+          <h1>Customers</h1>
+          <h2><center>Customer</h2></center>
+          <table>
+            <thead>
+              <tr>
+          <th>Name</th>
+          <th>Age</th>
+                <th>Occupation</th>
+                <th>Address</th>
+             <th>Email</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Sarah Johnson</td>
+                <td>32</td>
+                <td>Graphic Designer</td>
+                <td class="warning"> 123 Maple Street, Anytown, USA</td>
+                <td class="primary"> sarah.johnson@example.com</td>
+            </tr>
+              <tr>
+                  <td>David Ramirez</td>
+                  <td>45</td>
+                  <td>Accountant</td>
+                  <td class="warning">456 Oak Avenue, Springfield, USA</td>
+                  <td class="primary">david.ramirez@example.com</td>
+              </tr>
+              <tr>
+                  <td>Emily Chen</td>
+                  <td>28</td>
+                  <td>Software Engineer</td>
+                  <td class="warning">Pending</td>
+                  <td class="primary">emily.chen@example.com</td>
+              </tr>
+              <tr>
+                  <td>Michael Patel</td>
+                  <td>37</td>
+                  <td>Marketing Manager</td>
+                  <td class="warning">1010 Pine Road, Lakeside, USA</td>
+                  <td class="primary">michael.patel@example.com</td>
+              </tr>
+              <tr>
+                  <td> Jennifer Brown</td>
+                  <td>50</td>
+                  <td>Nurse</td>
+                  <td class="warning">111 Cedar Lane, Riverside, USA</td>
+                  <td class="primary">jennifer.brown@example.com</td>
+              </tr>
+              <tr>
+                  <td>Kevin Lee</td>
+                  <td>26</td>
+                  <td>Teacher</td>
+                  <td class="warning">222 Willow Drive, Hilltop, USA</td>
+                  <td class="primary">kevin.lee@example.com</td>
+              </tr>
+              <tr>
+                  <td>Samantha Garcia</td>
+                  <td>31</td>
+                  <td>Financial Analyst</td>
+                  <td class="warning">333 Birch Street, Sunnyvale, USA</td>
+                  <td class="primary">samantha.garcia@example.com</td>
+              </tr>
+              <tr>
+                  <td>Foldable Mini Drone</td>
+                  <td>85631</td>
+                  <td>Due</td>
+                  <td class="warning">Pending</td>
+                  <td class="primary">Details</td>
+              </tr>
+            </tbody>
+          </table>
+        
+        </main>
+          <main id="main16">
+            <h1>Feedback Form</h1>
+            <form action="#" method="post">
+                <label for="name">Your Name:</label>
+                <input type="text" id="name" name="name" required>
+
+                <label for="email">Your Email:</label>
+                <input type="text" id="email" name="email" required>
+
+                <label for="feedback">Feedback:</label>
+                <textarea id="feedback" name="feedback" required></textarea>
+
+                <input type="submit" value="Submit">
+            </form>
+          </main>
+          <main id="main17">
+          <i class="fas fa-cogs"></i>
+          <h1>Admin Dashboard Settings</h1>
+          <form action="#" method="post">
+              <div class="setting-item">
+                  <label for="site_title">Website Title:</label>
+                  <input type="text" id="site_title" name="site_title" value="My Awesome Dashboard">
+              </div>
+
+              <div class="setting-item">
+                  <label for="site_color">Dashboard Color:</label>
+                  <select id="site_color" name="site_color">
+                      <option value="#007bff">Blue</option>
+                      <option value="#28a745">Green</option>
+                      <option value="#dc3545">Red</option>
+                      <option value="#fd7e14">Orange</option>
+                      <option value="#6f42c1">Purple</option>
+                  </select>
+              </div>
+
+              <div class="setting-item">
+                  <label for="font_size">Font Size:</label>
+                  <input type="text" id="font_size" name="font_size" value="16px">
+              </div>
+
+              <div class="setting-item">
+                  <label for="font_family">Font Family:</label>
+                  <select id="font_family" name="font_family">
+                      <option value="Arial, sans-serif">Arial, sans-serif</option>
+                      <option value="Helvetica, sans-serif">Helvetica, sans-serif</option>
+                      <option value="Verdana, sans-serif">Verdana, sans-serif</option>
+                      <option value="Georgia, serif">Georgia, serif</option>
+                      <option value="Times New Roman, serif">Times New Roman, serif</option>
+                  </select>
+              </div>
+
+              <div class="setting-item">
+                  <label for="background_image">Background Image URL:</label>
+                  <input type="text" id="background_image" name="background_image">
+              </div>
+
+              <input type="submit" value="Save Settings">
+          </form>
+        </main>
+          <main id="main18">
+            <h2>Add Product</h2>
+            <form id="addProductForm">
+              <div class="form-group">
+                <label for="productName">Product Name:</label>
+                <input type="text" id="productName" name="productName" required>
+              </div>
+              <div class="form-group">
+                <label for="productPrice">Price:</label>
+                <input type="number" id="productPrice" name="productPrice" required>
+              </div>
+              <div class="form-group">
+                <label for="productDescription">Description:</label>
+                <textarea id="productDescription" name="productDescription" required></textarea>
+              </div>
+              <button type="submit">Add Product</button>
+            </form>
+          </main>
+          <main id= "main7">
+            <div class="right">
+              <div class="top">
+                <button id="menu-btn">
+                  <span class="material-symbols-out">
+                    menu
+                  </span>
+                </button>
+                <div class="theme-toggler">
+                  <span class='material-symbols-outlined active'>light_mode</span>
+                  <span class="material-symbols-outlined">dark_mode</span>
+                </div>
+                <div class="profile">
+                  <div class="info">
+                    <p>Hello,
+                    <b>Prem</b></p>
+                    <small class="text-muted">Admin</small>  
+                  </div>
+                  <div class="profile-photo">
+                    <img src="profile-1.jpg" alt="profile">
+                  </div>
+                </div>
+              </div>
+            <main id="main10">
+                <!--End of top -->
+              <div class="recent-Updates">
+                <h2>Recent Updates</h2>
+                <div class="updates">
+                  <div class="update">
+                    <div class="profile-photo">
+                      <img src="profile-2.jpg" alt="profile">
+                    </div>
+                    <div class="message">
+                      <p><b>Ananya panday</b> Received her order of night lion tech drone</p>
+                      <small class="text-muted"> 2 minutes ago </small>
+                  </div>
+                    <div class="update">
+                      <div class="profile-photo">
+                        <img src="profile-3.jpg" alt="profile">
+                      </div>
+                    <div class="message">
+                        <p><b>Prapti </b> Received her order of scooter </p>
+                        <small class="text-muted"> 2 minutes ago </small>
+                    </div>
+                      <div class="update">
+                        <div class="profile-photo">
+                          <img src="profile-4.jpg" alt="profile">
+                        </div>
+                    <div class="message">
+                        <p><b>Suchana </b> Received her order of makeup kit </p>
+                        <small class="text-muted"> 3 minutes ago </small>
+                    </div>
+                </div>
+              </div>
+                <!--End of Recent updates -->
+                <div class="sales-analytics">
+                  <h2>Sales Analytics</h2>
+                  <div class="item online">
+                    <div class="icon">
+                      <span class="material-symbols-outlined">
+                      shopping_cart
+                      </span>
+                    </div>
+                    <div class="right">
+                      <div class="info">
+                        <h3>
+                          ONLINE ORDERS
+                        </h3>
+                        <small class="text-muted">Last 24 Hours</small>
+                      </div>
+                      <h5 class="success">+39%
+                      </h5>
+                      <h2>8663</h2>
+                    </div>
+                  </div>
+                    <div class="item offline">
+                      <div class="icon">
+                        <span class="material-symbols-outlined">
+                        local_mall
+                        </span>
+                      </div>
+                      <div class="right">
+                        <div class="info">
+                          <h3>
+                            OFFLINE ORDERS
+                          </h3>
+                          <small class="text-muted">Last 24 Hours</small>
+                        </div>
+                        <h5 class="danger">-17%>
+                        </h5>
+                        <h2>8663</h2>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                </main>
+                </div>
+                </aside>
+                <script src="script.js"></script>
+                  <script src="order.js"></script>
+      </body>
+      </html>
